@@ -16,3 +16,7 @@
 .link_title {
     position: absolute;
 }
+
+.link_title a {
+    text-decoration: none;
+}

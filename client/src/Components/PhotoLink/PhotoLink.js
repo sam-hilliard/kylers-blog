@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import styles from './PhotoLink.module.css'
 
 export default function PhotoLink(props) {
@@ -7,9 +9,9 @@ export default function PhotoLink(props) {
     <div className={styles.photo_link}>
         <img className={styles.bg_img} alt={props.title} src={props.img} />
         <div className={styles.link_title}>
-          <a href={props.link}>
-            <h2>{props.title}</h2>
-          </a>
+          <Link to={props.link}>
+            <h3>{props.title}</h3>
+          </Link>
         </div>
     </div>
   )
