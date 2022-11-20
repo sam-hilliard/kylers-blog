@@ -1,7 +1,7 @@
-.photo_link {
+.container {
     position: relative;
     width: 100vw;
-    height: 200px;
+    height: 225px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +10,13 @@
 
 .bg_img { 
     max-width: 100%;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .link_title {
     position: absolute;
     text-decoration: none;
-    font-size: 1.953rem;
+    font-size: 2.5rem;
 }
 
 .link_title:hover {
