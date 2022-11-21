@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -21,16 +22,25 @@ export default function NavMenu() {
     }
   ]
 
+  const [menuActive, setMenuActive] = useState(false);
+
+  function handleClick() {
+    setMenuActive(prevVal => !prevVal)
+    console.log(menuActive)
+  }
+
   return (
-    <div className={styles.menu_container}>
-        <MenuIcon className={styles.menu_icon} />
-        <ul className={styles.menu_dropdown + " " + styles.menu_active}>
-          {navItems.map((item, index) => {
-            return(
-              <li key={index}><Link to={item.link}>{item.name}</Link></li>
-            )
-          })}
-        </ul>
-    </div>
+    <>
+      <div className={styles.menu_icon}>
+        <MenuIcon onClick={handleClick} />
+      </div>
+      <ul className={`${styles.menu_dropdown} ${menuActive ? styles.menu_active : ''}`}>
+        {navItems.map((item, index) => {
+          return(
+            <li key={index}><Link to={item.link}>{item.name}</Link></li>
+          )
+        })}
+      </ul>
+    </>
   )
 }
