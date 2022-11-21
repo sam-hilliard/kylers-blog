@@ -8,8 +8,8 @@ import BlogPage from './Pages/BlogPage/BlogPage';
 function App() {
   return (
     <div className="App">
-      <NavMenu />
       <BrowserRouter>
+        <NavMenu />
         <Routes>
           <Route path="/">
             <Route index element={<LandingPage />} />

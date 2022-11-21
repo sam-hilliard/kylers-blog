@@ -5,3 +5,34 @@
     left: 20px;
     transform: scale(2.5);
 }
+
+.menu_icon:hover {
+    fill: var(--secondary-color);
+    cursor: pointer;
+}
+
+.menu_dropdown {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 10px;
+    background-color: black;
+    border: 3px solid var(--primary-color);
+    z-index: 1;
+}
+
+.menu_dropdown a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.menu_dropdown li {
+    padding: 10px 0;
+}
+
+.menu_active {
+    transform: translateY(60px);
+}
