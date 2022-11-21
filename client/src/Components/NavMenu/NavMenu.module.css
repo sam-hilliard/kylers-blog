@@ -1,3 +1,5 @@
+/* Menu Icon styles */
+
 .menu_icon {
     position: absolute;
     top: 10px;
@@ -15,7 +17,7 @@
 
 .menu_icon:hover svg {
     cursor: pointer;
-    filter: drop-shadow(0px 2px 2px rgba(253, 253, 253, 0.8));
+    filter: drop-shadow(0px 0px 3px rgba(253, 253, 253, 0.8));
 }
 
 .menu_dropdown {
