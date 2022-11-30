@@ -8,7 +8,7 @@ import styles from './LandingPage.module.css'
 export default function LandingPage() {
   return (
     <div className={styles.container}>
-        <Header className={styles.header} title={<>Kyler<br />Walsh</>} />
+        <div className={styles.header}><Header title={<>Kyler<br />Walsh</>} /></div>
         <div className={`bg-img-fill ${styles.photo_sample}`} />
         <Link className={`title-link ${styles.photo_link}`}>Photographer</Link>
         <div className={`bg-img-fill ${styles.art_sample}`} />
