@@ -49,6 +49,7 @@ h5 {font-size: 1.25rem;}
     width: 300px;
     height: 5px;
     background-color: var(--primary-color);
+    margin-bottom: 2rem;
 }
 
 .centered {

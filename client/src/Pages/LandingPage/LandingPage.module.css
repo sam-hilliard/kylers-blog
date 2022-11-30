@@ -1,13 +1,5 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
+    display: grid;
+    align-content: flex-end;
     height: 100vh;
-}
-
-.container > * {
-    margin: 0;
-    line-height: normal;
 }
