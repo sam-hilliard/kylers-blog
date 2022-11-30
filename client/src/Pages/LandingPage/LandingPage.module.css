@@ -1,5 +1,42 @@
 .container {
-    display: grid;
-    align-content: flex-end;
+    --tint: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5));
+    --default-bg: hsl(0, 0%, 25%);
+
     height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+     "header"
+     "photo"
+     "art";
 }
+
+.header {
+    grid-area: header;
+}
+
+.photo_sample {
+    background-color: var(--default-bg);
+    background-image: var(--tint), url('../../assets/images/photo-sample.jpg');
+}
+
+.art_sample {
+    background-color: var(--default-bg);
+    background-image: var(--tint), url('../../assets/images/art-sample.jpg');
+}
+
+
+.photo_link, .photo_sample {
+    grid-area: photo;
+}
+
+.art_link, .art_sample {
+    grid-area: art;
+}
+
+.photo_link, .art_link {
+    align-self: center;
+    justify-self: center;
+}
+
+/* Desktop 2D Layout */

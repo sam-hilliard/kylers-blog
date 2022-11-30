@@ -1,27 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-import PhotoLink from '../../Components/PhotoLink/PhotoLink'
 import Header from '../../Components/Header/Header'
-
-import photoSample from '../../assets/images/photo-sample.jpg'
-import artSample from '../../assets/images/art-sample.jpg'
 
 import styles from './LandingPage.module.css'
 
 export default function LandingPage() {
   return (
     <div className={styles.container}>
-        <Header title={<>Kyler<br />Walsh</>} />
-        <PhotoLink 
-          img={photoSample}
-          link="" 
-          title="Photographer"
-        />
-        <PhotoLink 
-          img={artSample} 
-          link="" 
-          title="Artist"
-        />
+        <Header className={styles.header} title={<>Kyler<br />Walsh</>} />
+        <div className={`bg-img-fill ${styles.photo_sample}`} />
+        <Link className={`title-link ${styles.photo_link}`}>Photographer</Link>
+        <div className={`bg-img-fill ${styles.art_sample}`} />
+        <Link className={`title-link ${styles.art_link}`}>Artist</Link>
     </div>
   )
 }
