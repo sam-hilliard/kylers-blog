@@ -46,7 +46,7 @@ h5 {font-size: 1.25rem;}
 /* Other Global Styles */
 
 .separater {
-    width: 300px;
+    width: min(300px, 90%);
     height: 5px;
     background-color: var(--primary-color);
     margin-bottom: 2rem;
@@ -74,4 +74,9 @@ h5 {font-size: 1.25rem;}
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  padding-top: 100px;
 }
