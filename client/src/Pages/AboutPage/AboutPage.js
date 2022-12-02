@@ -2,10 +2,10 @@ import React from 'react'
 
 import Header from '../../Components/Header/Header'
 
-export default function BlogPage(props) {
+export default function AboutPage() {
   return (
     <div>
-      <Header title={props.title} />
+        <Header title="About" />
     </div>
   )
 }
