@@ -72,4 +72,8 @@
         justify-self: center;
         align-self: center;
     }
+
+    .underline {
+        display: none;
+    }
   }
