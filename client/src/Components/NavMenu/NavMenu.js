@@ -1,4 +1,5 @@
 import React from 'react'
+import {useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -29,6 +30,22 @@ export default function NavMenu() {
 
   const [menuActive, setMenuActive] = useState(false);
 
+  const dropDownMenu = useRef();
+
+  useEffect(() => {
+    function handleClickOutsideMenu(e) {
+      if (menuActive && dropDownMenu.current && !dropDownMenu.current.contains(e.target)) {
+        setMenuActive(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutsideMenu)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsideMenu)
+    }
+  }, [dropDownMenu, menuActive])
+
   function handleClick() {
     setMenuActive(prevVal => !prevVal)
   }
@@ -41,7 +58,7 @@ export default function NavMenu() {
       <div className={`${styles.menu_icon} ${menuActive ? styles.menu_icon_active : ''}`}>
         <CloseIcon onClick={handleClick} />
       </div>
-      <ul className={`${styles.menu_dropdown} ${menuActive ? styles.menu_active : ''}`}>
+      <ul className={`${styles.menu_dropdown} ${menuActive ? styles.menu_active : ''}`} ref={dropDownMenu}>
         {navItems.map((item, index) => {
           return(
             <li key={index}><Link to={item.link}>{item.name}</Link></li>
