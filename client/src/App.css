@@ -86,5 +86,18 @@ h5 {font-size: 1.25rem;}
 /* surroundes all pages (except landing) */
 .container {
   display: grid;
+  padding: 0 25px;
   padding-top: 100px;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.split > * {
+  max-width: 500px;
 }

@@ -1,0 +1,8 @@
+.imgContainer {
+    overflow: hidden;
+    width: min(100%, 250px);
+}
+
+.imgContainer > img {
+    width: 100%;
+}
