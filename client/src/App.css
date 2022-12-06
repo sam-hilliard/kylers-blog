@@ -95,7 +95,7 @@ h5 {font-size: 1.25rem;}
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 4.5rem;
 }
 
 .split > * {
