@@ -61,7 +61,7 @@ export default function NavMenu() {
       <ul className={`${styles.menu_dropdown} ${menuActive ? styles.menu_active : ''}`} ref={dropDownMenu}>
         {navItems.map((item, index) => {
           return(
-            <li key={index}><Link to={item.link}>{item.name}</Link></li>
+            <li key={index}><Link onClick={handleClick} to={item.link}>{item.name}</Link></li>
           )
         })}
       </ul>
