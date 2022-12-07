@@ -1,0 +1,34 @@
+.card {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "footer"
+    ;
+    gap: 1rem;
+    width: min(100%, 550px);
+}
+
+.img {
+    grid-area: header;
+    width: 100%;
+}
+
+.viewLinkContainer {
+    grid-area: header;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.viewLinkContainer:hover {
+    opacity: 1;
+}
+
+.footer {
+    grid-area: footer;
+}

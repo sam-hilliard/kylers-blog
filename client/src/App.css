@@ -101,3 +101,10 @@ h5 {font-size: 1.25rem;}
 .split > * {
   max-width: 500px;
 }
+
+.posts-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 3.5rem;
+}
