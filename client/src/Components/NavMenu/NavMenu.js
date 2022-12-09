@@ -2,8 +2,6 @@ import React from 'react'
 import {useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close';
 
 import styles from './NavMenu.module.css'
 
@@ -52,11 +50,8 @@ export default function NavMenu() {
 
   return (
     <>
-      <div className={`${styles.menu_icon} ${!menuActive ? styles.menu_icon_active : ''}`}>
-        <MenuIcon onClick={handleClick} className={`${menuActive ? styles.menu_icon_active : ''}`} />
-      </div>
-      <div className={`${styles.menu_icon} ${menuActive ? styles.menu_icon_active : ''}`}>
-        <CloseIcon onClick={handleClick} />
+      <div className={`${styles.menuIcon} ${menuActive ? styles.closeIcon : ''}`}  onClick={handleClick}>
+        <div></div>
       </div>
       <ul className={`${styles.menu_dropdown} ${menuActive ? styles.menu_active : ''}`} ref={dropDownMenu}>
         {navItems.map((item, index) => {
