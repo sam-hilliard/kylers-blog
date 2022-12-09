@@ -1,20 +1,21 @@
 .card {
     display: grid;
     justify-items: center;
-    align-items: center;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "header"
         "footer"
     ;
     gap: 1rem;
-    width: min(100%, 550px);
+    width: min(100%, 400px);
+    height: 350px;
 }
 
 .img {
     grid-area: header;
     width: 100%;
 }
+
 
 .viewLinkContainer {
     grid-area: header;

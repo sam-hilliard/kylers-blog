@@ -21,9 +21,11 @@ export default function BlogPage(props) {
   }
 
   return (
-    <div className="container posts-container">
+    <div className="container">
       <Header title={props.title} />
-      {getKittenCards(5)}
+        <div className="posts-container">
+          {getKittenCards(5)}
+        </div>
     </div>
   )
 }
