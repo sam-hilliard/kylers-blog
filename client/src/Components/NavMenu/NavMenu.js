@@ -28,12 +28,15 @@ export default function NavMenu() {
 
   const [menuActive, setMenuActive] = useState(false);
 
-  const dropDownMenu = useRef();
+  const dropDownMenu = useRef()
+  const menuIcon = useRef()
 
   useEffect(() => {
     function handleClickOutsideMenu(e) {
       if (menuActive && dropDownMenu.current && !dropDownMenu.current.contains(e.target)) {
+        if (menuIcon.current && !menuIcon.current.contains(e.target)) {
         setMenuActive(false)
+        }
       }
     }
 
@@ -50,7 +53,7 @@ export default function NavMenu() {
 
   return (
     <>
-      <div className={`${styles.menuIcon} ${menuActive ? styles.closeIcon : ''}`}  onClick={handleClick}>
+      <div className={`${styles.menuIcon} ${menuActive ? styles.closeIcon : ''}`}  onClick={handleClick} ref={menuIcon}>
         <div></div>
       </div>
       <ul className={`${styles.menu_dropdown} ${menuActive ? styles.menu_active : ''}`} ref={dropDownMenu}>
